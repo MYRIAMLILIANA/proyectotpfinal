@@ -1,0 +1,81 @@
+/* Estilos básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Contenedor de la grilla */
+.container {
+    display: grid;
+    grid-template-rows: auto 1fr auto; /* Definimos tres filas: header (auto), main (1fr) y footer (auto) */
+    grid-template-columns: 1fr; /* Una sola columna */
+    min-height: 100vh; /* Altura mínima de toda la página: ocupa la altura total de la ventana */
+}
+
+/* Header */
+.header {
+    background-color: hsl(4, 98%, 51%);
+    color: black;
+    padding: 20px;
+    text-align: center;
+}
+
+.header nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.header nav ul li {
+    display: inline;
+}
+
+.header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.header h1 {
+    margin-bottom: 10px;
+}
+
+/* Main */
+.main {
+    padding: 20px;
+    background-color: #fff;
+}
+
+.main h2 {
+    margin-bottom: 10px;
+}
+
+.main p {
+    margin-bottom: 20px;
+}
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Diseño adaptable para pantallas pequeñas */
+@media (max-width: 600px) {
+    .header nav ul {
+        flex-direction: column;
+        gap: 5px;
+    }
+}
